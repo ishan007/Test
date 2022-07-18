@@ -1,1 +1,1 @@
-Adding something to check Jenkins
+Adding something to check Jenkins pipeline
