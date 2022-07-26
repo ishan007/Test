@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'javac Main.java'
-                sh 'java Main Jenkins'
+                sh 'docker run openjdk:11 javac Main.java'
+                sh 'docker run openjdk:11 java Main Jenkins'
             }  
         }
     }
