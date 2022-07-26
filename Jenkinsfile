@@ -1,14 +1,14 @@
 pipeline {
     agent {
         docker {
-            image 'docker pull openjdk'
+            image 'openjdk:11'
         }
     }
 
     stages('build') {
         steps {
-            sh 'javac Main.java'
-            sh 'java Main.class Jenkins'
+            sh 'docker run openjdk:11 javac Main.java'
+            sh 'docker run openjdk:11 java Main.class Jenkins'
         }
     }
 }
