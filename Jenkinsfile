@@ -1,13 +1,14 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3.8.4-openjdk-11-slim'
+            image 'docker pull openjdk'
         }
     }
 
     stages('build') {
         steps {
-            sh 'mvn --version'
+            sh 'javac Main.java'
+            sh 'java Main.class Jenkins'
         }
     }
 }

@@ -6,7 +6,7 @@ class Main{
     }
 
     public static void main(String... str){
-        new Main().print(str[0] + " Hello!");
+        new Main().print(" Hello " + str[0] + "!!");
     }
 
 }
